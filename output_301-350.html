@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='utf-8'>
+    <title>Ranking 301-350</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #fff;
+        }
+        .ranking-table {
+            width: 1920px;
+            border-collapse: collapse;
+            table-layout: fixed;
+            background-color: #000;
+            color: #fff;
+        }
+        .ranking-row {
+            height: 270px;
+        }
+        .ranking-row td {
+            border: none;
+            height: 270px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .col-video, .col-res, .col-pixiv, .col-prev {
+            text-align: center; 
+            vertical-align: middle;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .col-search {
+            text-align: center; 
+            vertical-align: middle;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .col-rank { 
+            text-align: center; 
+            vertical-align: middle;
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        .col-score { 
+            text-align: center; 
+            vertical-align: middle;
+            font-size: 60px;
+            font-weight: bold;
+        }
+        
+        /* 各カラムの幅と背景色 */
+        .col-rank   { width: 180px; }
+        .col-video  { width: 180px; }
+        .col-res    { width: 180px; background-color: #151515; }
+        .col-pixiv  { width: 180px; }
+        .col-search { width: 200px; background-color: #151515; }
+        .col-score  { width: 260px; color: #ffeb3b; }
+        .col-prev   { width: 260px; background-color: #151515; }
+        
+        /* 前回順位用の文字色クラス */
+        .rank-up   { color: #4dabf7; }
+        .rank-down { color: #ff6b6b; }
+        .rank-same { color: #ffffff; }
+        .rank-new  { color: #ffd43b; }
+
+        /* 名前のカラム */
+        .col-name { 
+            width: 480px; 
+            padding: 0; 
+            position: relative; 
+            vertical-align: top;
+        }
+        .name-bg-img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        .name-text-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 8px 8px;
+            box-sizing: border-box;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        }
+        .name-text {
+            margin: 0;
+            color: #fff;
+            font-weight: bold;
+            white-space: nowrap;
+            
+            /* CSSの clamp() と calc() を使ったサイズ計算 */
+            font-size: clamp(10px, calc(440px / var(--len, 10)), 48px);
+            
+            text-shadow: 
+                2px  2px 0 #000,
+               -2px -2px 0 #000,
+                2px -2px 0 #000,
+               -2px  2px 0 #000,
+                0px  2px 0 #000,
+                0px -2px 0 #000,
+                2px  0px 0 #000,
+               -2px  0px 0 #000;
+        }
+    </style>
+    
+</head>
+<body>
+    <table class='ranking-table'>
+        <tr class='ranking-row'>
+            <td class='col-rank'>301</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/2/2b/NOBUMASA.jpg' alt='NOBUMASA(淫夢)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 9.0;'>NOBUMASA(淫夢)</div>
+                </div>
+            </td>
+            <td class='col-video'>22</td>
+            <td class='col-res'>5</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>46</td>
+            <td class='col-score'>25</td>
+            <td class='col-prev rank-down'>291 (-10)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>302</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/e/e8/%E7%86%8A%E5%A4%AA%E9%83%8E.jpg' alt='熊太郎'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 3;'>熊太郎</div>
+                </div>
+            </td>
+            <td class='col-video'>22</td>
+            <td class='col-res'>0</td>
+            <td class='col-pixiv'>2</td>
+            <td class='col-search'>201</td>
+            <td class='col-score'>24</td>
+            <td class='col-prev rank-new'>NEW</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>303</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://i.imgur.com/EOFBqoR.jpeg' alt='ピカチュウパンツ兄貴'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 10;'>ピカチュウパンツ兄貴</div>
+                </div>
+            </td>
+            <td class='col-video'>12</td>
+            <td class='col-res'>21</td>
+            <td class='col-pixiv'>1</td>
+            <td class='col-search'>306</td>
+            <td class='col-score'>24</td>
+            <td class='col-prev rank-down'>239 (-64)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>304</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/2/26/18%E7%95%AA.jpg' alt='18番(淫夢)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 5.8;'>18番(淫夢)</div>
+                </div>
+            </td>
+            <td class='col-video'>19</td>
+            <td class='col-res'>9</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>95</td>
+            <td class='col-score'>24</td>
+            <td class='col-prev rank-down'>302 (-2)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>305</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/f/f6/%E3%82%B4%E3%83%BC%E3%82%B0%E3%83%AB%E5%85%88%E7%94%9F2.jpg' alt='ゴーグル先生'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 6;'>ゴーグル先生</div>
+                </div>
+            </td>
+            <td class='col-video'>17</td>
+            <td class='col-res'>5</td>
+            <td class='col-pixiv'>2</td>
+            <td class='col-search'>1,790</td>
+            <td class='col-score'>23</td>
+            <td class='col-prev rank-down'>237 (-68)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>306</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/4/40/%E9%99%A2%E9%95%B7.jpg' alt='院長(Fatherless)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 10.399999999999999;'>院長(Fatherless)</div>
+                </div>
+            </td>
+            <td class='col-video'>13</td>
+            <td class='col-res'>18</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>1,210</td>
+            <td class='col-score'>23</td>
+            <td class='col-prev rank-up'>340 (+34)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>307</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/7/79/%E3%82%BA%E3%83%BB%E3%82%B4%E3%82%AA%E3%83%9E%E3%83%BB%E3%82%B0.jpg' alt='ズ・ゴオマ・グ(淫夢)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 10.399999999999999;'>ズ・ゴオマ・グ(淫夢)</div>
+                </div>
+            </td>
+            <td class='col-video'>14</td>
+            <td class='col-res'>16</td>
+            <td class='col-pixiv'>1</td>
+            <td class='col-search'>51</td>
+            <td class='col-score'>23</td>
+            <td class='col-prev rank-up'>342 (+35)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>308</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/1/1a/%E9%87%8E%E7%8D%A3%E5%BE%93%E5%85%84%E5%BC%9F.jpg' alt='野獣従兄弟'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 5;'>野獣従兄弟</div>
+                </div>
+            </td>
+            <td class='col-video'>20</td>
+            <td class='col-res'>4</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>800</td>
+            <td class='col-score'>23</td>
+            <td class='col-prev rank-down'>264 (-44)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>309</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/9/9d/%E7%88%86%E5%BC%BE%E5%B2%A9%E3%81%8F%E3%82%93.jpg' alt='爆弾岩くん'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 5;'>爆弾岩くん</div>
+                </div>
+            </td>
+            <td class='col-video'>10</td>
+            <td class='col-res'>25</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>115</td>
+            <td class='col-score'>23</td>
+            <td class='col-prev rank-down'>301 (-8)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>310</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/b/b6/%E5%84%AA%E4%BA%BA.jpg' alt='優人(WEST)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 6.200000000000001;'>優人(WEST)</div>
+                </div>
+            </td>
+            <td class='col-video'>21</td>
+            <td class='col-res'>3</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>47</td>
+            <td class='col-score'>23</td>
+            <td class='col-prev rank-down'>243 (-67)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>311</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/4/47/JackSimmons.jpg' alt='レイザー(レスリングシリーズ)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 14.399999999999999;'>レイザー(レスリングシリーズ)</div>
+                </div>
+            </td>
+            <td class='col-video'>18</td>
+            <td class='col-res'>9</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>31</td>
+            <td class='col-score'>23</td>
+            <td class='col-prev rank-down'>229 (-82)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>312</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://nicovideo.cdn.nimg.jp/thumbnails/35815658/35815658.67952699.L' alt='イケボスタッフ'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 7;'>イケボスタッフ</div>
+                </div>
+            </td>
+            <td class='col-video'>20</td>
+            <td class='col-res'>1</td>
+            <td class='col-pixiv'>1</td>
+            <td class='col-search'>577</td>
+            <td class='col-score'>22</td>
+            <td class='col-prev rank-down'>299 (-13)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>313</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://i.imgur.com/OyMrSal.jpeg' alt='バイトの人'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 5;'>バイトの人</div>
+                </div>
+            </td>
+            <td class='col-video'>1</td>
+            <td class='col-res'>3</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>19,400</td>
+            <td class='col-score'>22</td>
+            <td class='col-prev rank-up'>508 (+195)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>314</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/3/37/%E6%A8%A9%E8%97%A4%E5%89%9B.jpg' alt='権藤剛'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 3;'>権藤剛</div>
+                </div>
+            </td>
+            <td class='col-video'>11</td>
+            <td class='col-res'>3</td>
+            <td class='col-pixiv'>9</td>
+            <td class='col-search'>146</td>
+            <td class='col-score'>22</td>
+            <td class='col-prev rank-up'>375 (+61)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>315</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/e/e2/MRKM%E9%BE%8D.jpg' alt='MRKMR'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 3.5;'>MRKMR</div>
+                </div>
+            </td>
+            <td class='col-video'>17</td>
+            <td class='col-res'>9</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>114</td>
+            <td class='col-score'>22</td>
+            <td class='col-prev rank-up'>324 (+9)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>316</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/c/c5/%E3%83%A6%E3%82%A6%E5%90%9B.jpg' alt='ユウ君'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 3;'>ユウ君</div>
+                </div>
+            </td>
+            <td class='col-video'>11</td>
+            <td class='col-res'>0</td>
+            <td class='col-pixiv'>10</td>
+            <td class='col-search'>474</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-up'>545 (+229)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>317</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/2/20/SNJ%E5%BC%9F.jpg' alt='SNJ弟'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 3.0999999999999996;'>SNJ弟</div>
+                </div>
+            </td>
+            <td class='col-video'>14</td>
+            <td class='col-res'>10</td>
+            <td class='col-pixiv'>2</td>
+            <td class='col-search'>332</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-down'>308 (-9)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>318</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/9/9d/%E4%BB%81.jpg' alt='仁(ALMAZ)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 5.9;'>仁(ALMAZ)</div>
+                </div>
+            </td>
+            <td class='col-video'>21</td>
+            <td class='col-res'>0</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>45</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-down'>269 (-49)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>319</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/4/44/%E3%82%86%E3%81%86%E3%81%95%E3%81%8F%E3%81%AE%E5%BE%8C%E8%BC%A9.jpg' alt='NKI'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 2.0999999999999996;'>NKI</div>
+                </div>
+            </td>
+            <td class='col-video'>17</td>
+            <td class='col-res'>7</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>394</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-down'>318 (-1)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>320</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/2/2c/%E5%B7%A8%E8%B1%9A.jpg' alt='ゴロリ(淫夢)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 6.4;'>ゴロリ(淫夢)</div>
+                </div>
+            </td>
+            <td class='col-video'>15</td>
+            <td class='col-res'>11</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>284</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-up'>360 (+40)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>321</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/0/03/HRS%E3%81%A7%E3%81%992.jpg' alt='HRS'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 2.0999999999999996;'>HRS</div>
+                </div>
+            </td>
+            <td class='col-video'>8</td>
+            <td class='col-res'>0</td>
+            <td class='col-pixiv'>4</td>
+            <td class='col-search'>8,690</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-new'>NEW</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>322</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/b/b1/%E8%BA%AB%E4%BD%93%E3%81%AF%E5%A4%A7%E3%81%8D%E3%81%84%E3%81%8C%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E6%B0%97%E3%81%AE%E5%BC%B1%E3%81%9D%E3%81%86%E3%81%AA%E3%82%AA%E3%83%88%E3%83%8A%E3%81%AE%E3%81%8A%E5%85%84%E3%81%95%E3%82%932.jpg' alt='身体大気弱兄'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 6;'>身体大気弱兄</div>
+                </div>
+            </td>
+            <td class='col-video'>17</td>
+            <td class='col-res'>7</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>143</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-down'>319 (-3)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>323</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://i.imgur.com/nXWp16L.jpeg' alt='拷問親父'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 4;'>拷問親父</div>
+                </div>
+            </td>
+            <td class='col-video'>19</td>
+            <td class='col-res'>3</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>124</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-down'>257 (-66)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>324</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/5/54/Bungo%28Uniform_Torture%29.jpg' alt='文吾'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 2;'>文吾</div>
+                </div>
+            </td>
+            <td class='col-video'>10</td>
+            <td class='col-res'>12</td>
+            <td class='col-pixiv'>3</td>
+            <td class='col-search'>1,600</td>
+            <td class='col-score'>21</td>
+            <td class='col-prev rank-up'>341 (+17)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>325</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/3/34/YMSK.jpg' alt='YMSK'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 2.8;'>YMSK</div>
+                </div>
+            </td>
+            <td class='col-video'>20</td>
+            <td class='col-res'>0</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>311</td>
+            <td class='col-score'>20</td>
+            <td class='col-prev rank-down'>225 (-100)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>326</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/b/b1/YUIC.jpg' alt='YUIC'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 2.8;'>YUIC</div>
+                </div>
+            </td>
+            <td class='col-video'>18</td>
+            <td class='col-res'>4</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>219</td>
+            <td class='col-score'>20</td>
+            <td class='col-prev rank-up'>333 (+7)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>327</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/3/36/%E3%83%9C%E3%83%B3%E3%83%90%E3%83%BC%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3.jpg' alt='ボンバーライオンさん'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 10;'>ボンバーライオンさん</div>
+                </div>
+            </td>
+            <td class='col-video'>15</td>
+            <td class='col-res'>10</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>180</td>
+            <td class='col-score'>20</td>
+            <td class='col-prev rank-down'>292 (-35)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>328</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/6/65/%E4%BF%AE%E5%BE%A9%E5%BE%8C%E3%81%AE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88.jpg' alt='修復後のキリスト'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 8;'>修復後のキリスト</div>
+                </div>
+            </td>
+            <td class='col-video'>7</td>
+            <td class='col-res'>24</td>
+            <td class='col-pixiv'>1</td>
+            <td class='col-search'>145</td>
+            <td class='col-score'>20</td>
+            <td class='col-prev rank-down'>325 (-3)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>329</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/1/1b/%E9%87%8E%E7%90%83%E9%83%A8%E3%81%AE%E3%82%A8%E3%83%BC%E3%82%B9%E3%83%BB%E6%B7%B3.jpg' alt='二軍淫夢のエース'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 8;'>二軍淫夢のエース</div>
+                </div>
+            </td>
+            <td class='col-video'>12</td>
+            <td class='col-res'>15</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>197</td>
+            <td class='col-score'>20</td>
+            <td class='col-prev rank-down'>313 (-16)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>330</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/3/3b/TMBK.jpg' alt='TMBK'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 2.8;'>TMBK</div>
+                </div>
+            </td>
+            <td class='col-video'>18</td>
+            <td class='col-res'>3</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>177</td>
+            <td class='col-score'>20</td>
+            <td class='col-prev rank-down'>276 (-54)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>331</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/1/12/TAISHI.jpg' alt='座敷童子(淫夢)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 7.4;'>座敷童子(淫夢)</div>
+                </div>
+            </td>
+            <td class='col-video'>14</td>
+            <td class='col-res'>11</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>74</td>
+            <td class='col-score'>20</td>
+            <td class='col-prev rank-down'>304 (-27)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>332</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/7/7f/%E9%9C%9C%E9%99%8D%E3%82%8A%E6%98%8E%E6%98%9F%E3%81%9B%E3%81%84%E3%82%84.jpg' alt='顔が変な人のついでに発掘された人'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 16;'>顔が変な人のついでに発掘された人</div>
+                </div>
+            </td>
+            <td class='col-video'>4</td>
+            <td class='col-res'>30</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>42</td>
+            <td class='col-score'>19</td>
+            <td class='col-prev rank-down'>272 (-60)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>333</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/b/bb/%E6%98%9F%E3%81%AE%E4%BB%B2%E9%96%93.jpg' alt='星の仲間'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 4;'>星の仲間</div>
+                </div>
+            </td>
+            <td class='col-video'>2</td>
+            <td class='col-res'>10</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>12,000</td>
+            <td class='col-score'>19</td>
+            <td class='col-prev rank-up'>346 (+13)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>334</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/6/67/%E3%82%B3%E3%83%8D%E3%82%B9%E3%82%B1.jpg' alt='コネスケ'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 4;'>コネスケ</div>
+                </div>
+            </td>
+            <td class='col-video'>16</td>
+            <td class='col-res'>3</td>
+            <td class='col-pixiv'>1</td>
+            <td class='col-search'>348</td>
+            <td class='col-score'>19</td>
+            <td class='col-prev rank-new'>NEW</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>335</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://i.imgur.com/aRDOrxS.jpeg' alt='ホモビ戦士'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 5;'>ホモビ戦士</div>
+                </div>
+            </td>
+            <td class='col-video'>6</td>
+            <td class='col-res'>25</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>311</td>
+            <td class='col-score'>19</td>
+            <td class='col-prev rank-down'>296 (-39)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>336</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/5/5e/BRP.jpg' alt='フィンランドハーフ兄貴'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 11;'>フィンランドハーフ兄貴</div>
+                </div>
+            </td>
+            <td class='col-video'>15</td>
+            <td class='col-res'>7</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>201</td>
+            <td class='col-score'>19</td>
+            <td class='col-prev rank-down'>323 (-13)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>337</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/b/ba/%E3%82%BF%E3%82%AB%E3%82%B7%E3%82%A3.jpg' alt='タカシィ'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 4;'>タカシィ</div>
+                </div>
+            </td>
+            <td class='col-video'>18</td>
+            <td class='col-res'>1</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>138</td>
+            <td class='col-score'>19</td>
+            <td class='col-prev rank-down'>314 (-23)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>338</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/a/a7/%E8%97%8D%E6%BE%A4%E6%97%AC%E8%B2%B4.jpg' alt='AIZW'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 2.8;'>AIZW</div>
+                </div>
+            </td>
+            <td class='col-video'>18</td>
+            <td class='col-res'>1</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>36</td>
+            <td class='col-score'>19</td>
+            <td class='col-prev rank-up'>473 (+135)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>339</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/a/ae/TMNG.jpg' alt='TMNG'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 2.8;'>TMNG</div>
+                </div>
+            </td>
+            <td class='col-video'>4</td>
+            <td class='col-res'>27</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>870</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-down'>307 (-32)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>340</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/8/84/HQ_i-mode%E3%82%BF%E3%82%AF%E3%83%A4%E5%90%9B.jpg' alt='i-modeタクヤ君'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 8.2;'>i-modeタクヤ君</div>
+                </div>
+            </td>
+            <td class='col-video'>17</td>
+            <td class='col-res'>2</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>219</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-down'>282 (-58)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>341</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://i.imgur.com/LkWSM1J.jpeg' alt='モザイク姉貴'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 6;'>モザイク姉貴</div>
+                </div>
+            </td>
+            <td class='col-video'>9</td>
+            <td class='col-res'>16</td>
+            <td class='col-pixiv'>1</td>
+            <td class='col-search'>205</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-down'>303 (-38)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>342</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://i.imgur.com/X01QpNq.jpeg' alt='SYK姉貴'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 4.1;'>SYK姉貴</div>
+                </div>
+            </td>
+            <td class='col-video'>9</td>
+            <td class='col-res'>17</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>577</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-up'>344 (+2)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>343</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/e/e5/%E7%B2%BE%E5%AD%90%E8%88%90%E3%82%81%E3%81%8C%E3%81%84%E3%82%84%E3%82%89%E3%81%97%E3%81%84.jpg' alt='ワッキー(精子舐めがいやらしい)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 15.399999999999999;'>ワッキー(精子舐めがいやらしい)</div>
+                </div>
+            </td>
+            <td class='col-video'>6</td>
+            <td class='col-res'>24</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>25</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-down'>327 (-16)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>344</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/e/e1/%E5%B0%8F%E9%9B%AA.jpg' alt='小雪(淫夢)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 5.4;'>小雪(淫夢)</div>
+                </div>
+            </td>
+            <td class='col-video'>9</td>
+            <td class='col-res'>17</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>282</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-down'>311 (-33)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>345</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/d/dd/%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%81%8F%E3%82%93%E9%9D%99%E6%AD%A2%E7%94%BB.jpg' alt='スカイフィッシュくん'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 10;'>スカイフィッシュくん</div>
+                </div>
+            </td>
+            <td class='col-video'>9</td>
+            <td class='col-res'>7</td>
+            <td class='col-pixiv'>5</td>
+            <td class='col-search'>279</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-down'>258 (-87)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>346</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/e/ea/%E7%9C%9F%E3%83%BB%E8%82%89%E4%BD%93%E6%B4%BE%E9%A3%9F%E3%83%91%E3%83%B3%E3%83%9E%E3%83%B3.jpg' alt='真・肉体派食パンマン'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 10;'>真・肉体派食パンマン</div>
+                </div>
+            </td>
+            <td class='col-video'>3</td>
+            <td class='col-res'>29</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>239</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-new'>NEW</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>347</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/4/4a/%E4%BA%AE.jpg' alt='ソーナノ(淫夢)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 7.4;'>ソーナノ(淫夢)</div>
+                </div>
+            </td>
+            <td class='col-video'>11</td>
+            <td class='col-res'>13</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>156</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-up'>348 (+1)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>348</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/8/8c/%E7%8E%89%E6%9C%A8%E4%BF%AE.jpeg' alt='玉木修'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 3;'>玉木修</div>
+                </div>
+            </td>
+            <td class='col-video'>16</td>
+            <td class='col-res'>3</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>111</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-down'>330 (-18)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>349</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/8/82/%E3%83%9E%E3%83%A2%E3%83%AB_HEADLINE.jpg' alt='櫻井翔(淫夢)'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 6.4;'>櫻井翔(淫夢)</div>
+                </div>
+            </td>
+            <td class='col-video'>14</td>
+            <td class='col-res'>7</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>76</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-down'>260 (-89)</td>
+        </tr>
+        <tr class='ranking-row'>
+            <td class='col-rank'>350</td>
+            <td class='col-name'>
+                <img class='name-bg-img' src='https://wiki.yjsnpi.nu/w/images/4/4b/%E8%B1%8A%E7%94%B0%E5%8A%9B.png' alt='豊田力'>
+                <div class='name-text-container'>
+                    <div class='name-text' style='--len: 3;'>豊田力</div>
+                </div>
+            </td>
+            <td class='col-video'>16</td>
+            <td class='col-res'>3</td>
+            <td class='col-pixiv'>0</td>
+            <td class='col-search'>61</td>
+            <td class='col-score'>18</td>
+            <td class='col-prev rank-up'>359 (+9)</td>
+        </tr>
+    </table>
+</body>
+</html>
