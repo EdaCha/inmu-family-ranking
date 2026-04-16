@@ -11,7 +11,7 @@ from playwright.sync_api import sync_playwright
 # キャラクター名の入力CSV
 INPUT_FILE = "characters.csv"
 # 順位比較用過去データ
-PAST_DATA_FILE = os.path.join('data', '2024.csv')
+PAST_DATA_FILE = os.path.join('data', '2025.csv')
 # 出力ランキングデータ
 OUTPUT_FILE = "ranking7.csv"
 # 一件取得毎のウェイト秒。エラーになるようなら伸ばす
